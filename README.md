@@ -1,140 +1,161 @@
-# Hotel-Project-Java-
-Hotel Management System Project 
+# 🏨 Hotel Management System
 
+## 👤 Author
 
-# Author
-Magamedkhan Osmanov
+**Magamedkhan Osmanov**
 
+## 📦 Version
 
+**v9.0 (Last updated: 09.01.2026)**
 
-# Version
-09.01.2026 v9.0 Last Updated
+---
 
+## 📖 Description
 
+A JavaFX-based hotel management system for managing rooms, employees, customers, and reservations.
+The application includes authentication, room availability visualization, and management panels for handling data.
 
-# Description
-A JavaFxxbased hotel management system that manages rooms, employees, customers, and reservations. Features include login authentication, room availability visualization, and comprehensive management panels.
+---
 
+## ⚙️ Requirements
 
+* Java JDK 17–21
+* JavaFX SDK (if not included in your JDK)
 
-# Requirements
--Java JDK 17-21
--JavaFX SDK (if not included in your JDK)
+---
 
+## 🛠️ Technologies
 
+* Java
+* JavaFX
+* Object-Oriented Programming (OOP)
 
-# Project Structure
-HotelManagementSystem.java  - Main application entry point
-ILoginable.java             - Custom interface for login functionality
-Person.java                 - Base class for Employee and Customer
-Employee.java               - Employee class implementing ILoginable
-Customer.java               - Customer class implementing Comparable
-Room.java                   - Room entity class
-Reservation.java            - Reservation entity class
-DataManager.java            - Singleton class for data persistence
-LoginScreen.java            - Login screen with analog clock
-MainScreen.java             - Main screen with room grid and date selection
-ManagementScreen.java       - Management panel for data entry
+---
 
+## 🚀 How to Run
 
+### ▶️ Option 1: Using IntelliJ IDEA (Recommended)
 
+1. Open the project in IntelliJ IDEA
+2. Add JavaFX SDK to the project
+3. Run the main class: `HotelManagementSystem`
 
-# How to Compile
-Option 1: Using Command Line (if JavaFX is in JDK)
-bash javac *.java
+---
 
-Option 2: Using Command Line (with external JavaFX)
-bash javac --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls *.java
+### ▶️ Option 2: Command Line (JavaFX included in JDK)
 
-Option 3: Using an IDE (Recommended IntelliJ)
-1. Import thsi project into your IDE (Eclipse, IntelliJ IDEA, NetBeans)
-2. Add JavaFX library to your project build path
-3. Build the project
-
-
-
-
-
-# How to Run
-Option 1: Using Command Line (if JavaFX is in JDK)
+```bash
+javac *.java
 java HotelManagementSystem
+```
 
-Option 2: Using Command Line (with external JavaFX)
+---
+
+### ▶️ Option 3: Command Line (External JavaFX)
+
+```bash
+javac --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls *.java
 java --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls HotelManagementSystem
+```
 
-Option 3: Using an IDE
- 1. Open in IntelliJ IDEA
- 2. Wait for Maven to load dependencies (pom.xml is included in project)
- 3.OPpen Maven at the right side of the IDE -> open Execute Maven Goal -> run this command: mvn clean javafx:run
+---
 
+## 🔐 Default Login
 
+* **Username:** admin
+* **Password:** admin
 
-# Default Login Credentials
-Username: admin
-Password:admin
+---
 
+## 📁 Project Structure
 
-# Features
-Login Screen
-- Custom analog clock created with JavaFX Canvas
-- Login validation using ILoginable interface
-- Default admin account
+* `HotelManagementSystem.java` — Main application entry point
+* `ILoginable.java` — Interface for login functionality
+* `Person.java` — Base class for Employee and Customer
+* `Employee.java` — Employee class (implements ILoginable)
+* `Customer.java` — Customer class (implements Comparable)
+* `Room.java` — Room entity
+* `Reservation.java` — Reservation entity
+* `DataManager.java` — Singleton class for data storage
+* `LoginScreen.java` — Login UI with analog clock
+* `MainScreen.java` — Main UI with room grid
+* `ManagementScreen.java` — Management panel
 
-# Main Screen
-- 25 rooms displayed in a 5x5 grid
-- Date range selection for checking availability
-- Room color coding:
-  - Green: Completely free
-  - Orange: Partially occupied
-  - Red: Fully occupied
-- Click rooms to view customer reservations
-- Customer list sorted by name (Comparable implementation)
+---
 
-# Management Panel
-- Room Management: Add new rooms with type and pricing
-- Employee Management: Add new employees with login credentials
-- Reservation Management: Create reservations for customers
+## ⭐ Features
 
+### 🔑 Login System
 
+* Custom analog clock (JavaFX Canvas)
+* Login validation via interface
+* Default admin account
 
+---
 
+### 🏠 Main Screen
 
-# Data Persistence
-The system uses text file storage with three files:
-- rooms.txt - Stores room information
-- employees.txt - Stores employee information
--reservations.txt - Stores reservation and customer data
-Files are automatically created on first run with default data.
+* 25 rooms (5×5 grid)
+* Date selection for availability
+* Color indicators:
 
+  * 🟢 Green — free
+  * 🟠 Orange — partially occupied
+  * 🔴 Red — fully occupied
+* Click room → view reservations
+* Customers sorted by name
 
+---
 
+### 🛠️ Management Panel
 
+* Add rooms (type & price)
+* Add employees (with login credentials)
+* Create reservations
 
-# Object-Oriented Features
-- Custom Interface: ILoginable (implemented by Employee)
-- Built-in Interface: Comparable (implemented by Customer)
-- Inheritance: Person -> Employee, Person -> Customer
-- Encapsulation: Private fields with getters/setters
-- Singleton Pattern: DataManager class
+---
 
+## 💾 Data Storage
 
+The system uses text files:
 
+* `rooms.txt`
+* `employees.txt`
+* `reservations.txt`
 
-# Error Handling
-- Input validation for all forms
-- Date range validation
-- Empty field checks
-- Invalid login detection
-- User-friendly error messages
+✔ Files are created automatically on first run
 
+---
 
+## 🧠 OOP Concepts Used
 
-# Notes
-- The system automatically saves data when changes are made
-- All 25 rooms are initialized on first run
-- Customer sorting is by name, then by check-in date if names match
-- Reservations can overlap (overbooking is allowed in this version)
+* Interface: `ILoginable`
+* Comparable: `Customer`
+* Inheritance: `Person → Employee / Customer`
+* Encapsulation: getters & setters
+* Singleton: `DataManager`
 
+---
 
+## ⚠️ Error Handling
 
-If you have any questions contact through email - Magosm.06@yandex.com
+* Input validation
+* Date validation
+* Empty field checks
+* Invalid login detection
+* User-friendly messages
+
+---
+
+## 📌 Notes
+
+* Data is saved automatically
+* 25 rooms are generated on first run
+* Customers are sorted by name
+* Reservation overlapping is allowed
+
+---
+
+## 📧 Contact
+
+Email: **[Magosm.06@yandex.com](mailto:Magosm.06@yandex.com)**
