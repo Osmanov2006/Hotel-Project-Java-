@@ -2,33 +2,28 @@
 Hotel Management System Project 
 
 
-Author
+# Author
 Magamedkhan Osmanov
 
 
 
-
-Version
+# Version
 09.01.2026 v9.0 Last Updated
 
 
 
-
-Description
+# Description
 A JavaFxxbased hotel management system that manages rooms, employees, customers, and reservations. Features include login authentication, room availability visualization, and comprehensive management panels.
 
 
 
-
-Requirements
+# Requirements
 -Java JDK 17-21
 -JavaFX SDK (if not included in your JDK)
 
 
 
-
-Project Structure
-
+# Project Structure
 HotelManagementSystem.java  - Main application entry point
 ILoginable.java             - Custom interface for login functionality
 Person.java                 - Base class for Employee and Customer
@@ -43,8 +38,8 @@ ManagementScreen.java       - Management panel for data entry
 
 
 
-How to Compile
 
+# How to Compile
 Option 1: Using Command Line (if JavaFX is in JDK)
 bash javac *.java
 
@@ -60,7 +55,7 @@ Option 3: Using an IDE (Recommended IntelliJ)
 
 
 
-How to Run
+# How to Run
 Option 1: Using Command Line (if JavaFX is in JDK)
 java HotelManagementSystem
 
@@ -73,21 +68,19 @@ Option 3: Using an IDE
  3.OPpen Maven at the right side of the IDE -> open Execute Maven Goal -> run this command: mvn clean javafx:run
 
 
-Default Login Credentials
+
+# Default Login Credentials
 Username: admin
 Password:admin
 
 
-
-
-
-Features
+# Features
 Login Screen
 - Custom analog clock created with JavaFX Canvas
 - Login validation using ILoginable interface
 - Default admin account
 
-Main Screen
+# Main Screen
 - 25 rooms displayed in a 5x5 grid
 - Date range selection for checking availability
 - Room color coding:
@@ -97,7 +90,7 @@ Main Screen
 - Click rooms to view customer reservations
 - Customer list sorted by name (Comparable implementation)
 
-Management Panel
+# Management Panel
 - Room Management: Add new rooms with type and pricing
 - Employee Management: Add new employees with login credentials
 - Reservation Management: Create reservations for customers
@@ -106,7 +99,7 @@ Management Panel
 
 
 
-Data Persistence
+# Data Persistence
 The system uses text file storage with three files:
 - rooms.txt - Stores room information
 - employees.txt - Stores employee information
@@ -117,7 +110,7 @@ Files are automatically created on first run with default data.
 
 
 
-Object-Oriented Features
+# Object-Oriented Features
 - Custom Interface: ILoginable (implemented by Employee)
 - Built-in Interface: Comparable (implemented by Customer)
 - Inheritance: Person -> Employee, Person -> Customer
@@ -127,7 +120,7 @@ Object-Oriented Features
 
 
 
-Error Handling
+# Error Handling
 - Input validation for all forms
 - Date range validation
 - Empty field checks
@@ -136,7 +129,7 @@ Error Handling
 
 
 
-Notes
+# Notes
 - The system automatically saves data when changes are made
 - All 25 rooms are initialized on first run
 - Customer sorting is by name, then by check-in date if names match
