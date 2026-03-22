@@ -64,6 +64,8 @@ java --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls HotelMa
 
 * **Username:** admin
 * **Password:** admin
+  ## Screenshots
+![Main Screen](https://github.com/Osmanov2006/Hotel-Project-Java-/blob/main/2026-03-22%20(7).png)
 
 ---
 
